@@ -6,6 +6,7 @@ filetype plugin indent on
 set t_Co=256
 colorscheme Tomorrow-Night-Eighties
 
+:set synmaxcol=300
 :set expandtab
 :set tabstop=2
 :set shiftwidth=2
@@ -14,25 +15,26 @@ colorscheme Tomorrow-Night-Eighties
 :set incsearch
 :set scrolljump=35
 :set cursorline
-":set clipboard=unnamed
 :set omnifunc=csscomplete#CompleteCSS
-autocmd BufNewFile,BufRead *.scss          set ft=scss.css
+:set formatoptions-=cro
+autocmd BufNewFile,BufRead *.scss
+:set ft=scss.css
 
-
-au Filetype html,xml,erb source ~/.vim/scripts/wrapwithtag.vim
+" Remap leader key to space
+let mapleader = "\<space>"
+" NerdTree bindings
 nnoremap <leader>n :NERDTree ~/Sites<CR>
 nnoremap <leader>r :NERDTreeFind<CR>
+" Delete value of CSS property
 nnoremap <leader>; 02Wdv$i
+" Alphabetically Sort within {
+nnoremap <leader>s vi{:sort<CR>
 
-noremap  <Up> ""
-noremap! <Up> <Esc>
-noremap  <Down> ""
-noremap! <Down> <Esc>
-noremap  <Left> ""
-noremap! <Left> <Esc>
-noremap  <Right> ""
-noremap! <Right> <Esc>
-
-:set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+" Ignore files and folders in Ctrl+P
+:set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip
 
 let g:html_indent_tags = 'p\|li\|nav'
+
+" Remap jk to save and exit insert mode
+:imap jk <Esc>:w<CR>
+:set timeout timeoutlen=100
