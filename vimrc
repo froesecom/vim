@@ -17,8 +17,7 @@ colorscheme Tomorrow-Night-Eighties
 :set cursorline
 :set omnifunc=csscomplete#CompleteCSS
 :set formatoptions-=cro
-autocmd BufNewFile,BufRead *.scss
-:set ft=scss.css
+autocmd BufNewFile,BufRead *.scss       set ft=scss.css
 
 " Remap leader key to space
 let mapleader = "\<space>"
