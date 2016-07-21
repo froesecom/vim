@@ -1,6 +1,8 @@
 # To clone
 clone to ~/
+
 blow away .vim
+
 rename this .vim
 
 # To update plugins:
