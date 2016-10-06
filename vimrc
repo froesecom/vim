@@ -39,4 +39,7 @@ let g:html_indent_tags = 'p\|li\|nav'
 
 " Remap jk to save and exit insert mode
 " :imap jk <Esc>:w<CR>
+" Remap :W to :w
+:command W w
+
 " :set timeout timeoutlen=150
