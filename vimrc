@@ -31,6 +31,7 @@ nnoremap <leader>; 02Wdv$i
 nnoremap <leader>s vi{:sort<CR>
 
 nnoremap <leader>e i<%=   %><Esc>F=la
+nnoremap <leader>w i<%   %><Esc>hhhha
 
 " Ignore files and folders in Ctrl+P
 :set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip
