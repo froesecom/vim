@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-<<<<<<< HEAD
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/Froese/python/nefarious'
-let g:netrw_dirhist_2='/Users/Froese/rails/5/razor'
-let g:netrw_dirhist_3='/Users/Froese/rails/5/razor/db/migrate'
-let g:netrw_dirhist_4='/Users/Froese/rails/5/razor'
-let g:netrw_dirhist_5='/Users/Froese/rails/4/razor'
-=======
 let g:netrw_dirhist_cnt =0
->>>>>>> c28f0c36180b529390b14cb588491ca3e48ae849
