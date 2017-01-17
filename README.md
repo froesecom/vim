@@ -14,3 +14,8 @@ $ git submodule update
 $ ln -s ~/.vim/vimrc ~/.vimrc
 
 $ ln -s ~/.vim/gvimrc ~/.gvimrc
+
+
+## plugin/custom shortcuts
+- `ctrl + e` insert mode, autocomplete htmo
+
