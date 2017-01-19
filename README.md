@@ -18,4 +18,6 @@ $ ln -s ~/.vim/gvimrc ~/.gvimrc
 
 ## plugin/custom shortcuts
 - `ctrl + e` insert mode, autocomplete htmo
+- `space + e` erb tag (print)
+- `space + w` erb tag
 
