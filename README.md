@@ -15,6 +15,8 @@ $ ln -s ~/.vim/vimrc ~/.vimrc
 
 $ ln -s ~/.vim/gvimrc ~/.gvimrc
 
+## optional
+Install [ripgrep](https://github.com/BurntSushi/ripgrep) for faster fuzzy find
 
 ## plugin/custom shortcuts
 - `ctrl + e` insert mode, autocomplete htmo
