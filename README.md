@@ -18,6 +18,9 @@ $ ln -s ~/.vim/gvimrc ~/.gvimrc
 ## optional
 Install [ripgrep](https://github.com/BurntSushi/ripgrep) for faster fuzzy find
 
+`.vimrc` is setup to use `rg` for `ctl + p` as soon as ripgrep is installed.
+You can also use `:Rg [search term]` inside of instead of using `:vimgrep`.
+
 ## plugin/custom shortcuts
 - `ctrl + e` insert mode, autocomplete htmo
 - `space + e` erb tag (print)
