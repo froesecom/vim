@@ -1,5 +1,16 @@
-execute pathogen#infect()
-Helptags
+call plug#begin('~/.config/vim/plugged')
+Plug 'jremmen/vim-ripgrep'
+Plug 'kien/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdtree'
+Plug 'rstacruz/sparkup'
+Plug 'Townk/vim-autoclose'
+Plug 'digitaltoad/vim-pug'
+Plug 'isRuslan/vim-es6'
+Plug 'leafgarland/typescript-vim'
+Plug 'tpope/vim-rails'
+call plug#end()
 
 syntax on
 filetype plugin indent on

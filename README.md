@@ -5,10 +5,10 @@ blow away .vim
 
 rename this .vim
 
-# To update plugins:
-$ git submodule init
+## To install plugins
 
-$ git submodule update
+- `:PlugInstall`.
+- Plugins are defined in `.vimrc`
 
 # Relink vimrc
 $ ln -s ~/.vim/vimrc ~/.vimrc
