@@ -42,8 +42,8 @@ nnoremap <leader>; 02Wdv$i
 " Alphabetically Sort within {
 nnoremap <leader>s vi{:sort<CR>
 
-nnoremap <leader>e i<%=   %><Esc>F=la
-nnoremap <leader>w i<%   %><Esc>hhhha
+nnoremap <leader>e i<%=  %><Esc>F=la
+nnoremap <leader>w i<%  %><Esc>hhha
 
 " Ignore files and folders in Ctrl+P
 :set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip
