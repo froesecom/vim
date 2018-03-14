@@ -28,6 +28,7 @@ colorscheme Tomorrow-Night-Eighties
 :set cursorline
 :set omnifunc=csscomplete#CompleteCSS
 :set clipboard=unnamedplus
+:set noeb vb t_vb= "no bloopy noises"
 ":set formatoptions-=cro
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd BufNewFile,BufRead *.scss       set ft=scss.css
@@ -54,7 +55,6 @@ let g:html_indent_tags = 'p\|li\|nav'
 " :imap jk <Esc>:w<CR>
 " Remap :W to :w
 :command W w
-
 if executable('rg')
   set grepprg=rg\ --color=never
   let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
