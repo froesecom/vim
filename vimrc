@@ -32,6 +32,7 @@ colorscheme Tomorrow-Night-Eighties
 ":set formatoptions-=cro
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd BufNewFile,BufRead *.scss       set ft=scss.css
+autocmd FileType ruby autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " Remap leader key to space
 let mapleader = "\<space>"
@@ -62,3 +63,16 @@ if executable('rg')
 endif
 
 " :set timeout timeoutlen=150
+function ShowSpaces(...)
+  let @/='\v(\s+$)|( +\ze\t)'
+  let oldhlsearch=&hlsearch
+  if !a:0
+    let &hlsearch=!&hlsearch
+  else
+    let &hlsearch=a:1
+  end
+  return oldhlsearch
+endfunction
+
+command -bar -nargs=? ShowSpaces call ShowSpaces(<args>)
+nnoremap <F12>     :ShowSpaces 1<CR>
