@@ -34,6 +34,9 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 autocmd BufNewFile,BufRead *.scss       set ft=scss.css
 autocmd FileType ruby autocmd BufWritePre <buffer> %s/\s\+$//e
 
+" Allow opening of new tabs in Ripgrep
+autocmd FileType qf nnoremap <buffer> <C-T> <C-W><Enter><C-W>T
+
 " Remap leader key to space
 let mapleader = "\<space>"
 " NerdTree bindings
