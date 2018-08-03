@@ -10,6 +10,12 @@ Plug 'digitaltoad/vim-pug'
 Plug 'isRuslan/vim-es6'
 Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-rails'
+Plug 'w0rp/ale'
+Plug 'Quramy/tsuquyomi'
+Plug 'pangloss/vim-javascript'
+Plug 'Quramy/vim-js-pretty-template'
+Plug 'ianks/vim-tsx'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 syntax on
@@ -52,6 +58,31 @@ nnoremap <leader>w i<%  %><Esc>hhha
 
 " Ignore files and folders in Ctrl+P
 :set wildignore+=*/tmp/*,*/node_modules/*,*.so,*.swp,*.zip
+
+" JS Stuff
+" vim js pretty template strings
+au FileType typescript setl sw=2 sts=2 et
+autocmd FileType typescript JsPreTmpl html
+autocmd FileType typescript syn clear foldBraces
+" Ale Fixers
+let g:ale_fixers = {
+\   'typescript': ['prettier', 'tslint'],
+\   'scss'      : ['stylelint']
+\}
+nmap <silent> <C-k> <Plug>(ale_previous)
+nmap <silent> <C-j> <Plug>(ale_next)
+let g:ale_typescript_tslint_use_global = 0
+let g:ale_typescript_tslint_config_path = './tslint.json'
+let g:ale_lint_on_text_changed = 'never' 
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 0
+highlight ALEError ctermbg=Red
+highlight ALEError ctermfg=Black
+highlight YcmErrorSection ctermbg=Red
+highlight YcmErrorSection ctermfg=Black
+autocmd FileType typescript JsPreTmpl html
+autocmd FileType typescript syn clear foldBraces
 
 let g:html_indent_tags = 'p\|li\|nav'
 
