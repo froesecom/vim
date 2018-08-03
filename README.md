@@ -26,3 +26,4 @@ You can also use `:Rg [search term]` inside of instead of using `:vimgrep`.
 - `space + e` erb tag (print)
 - `space + w` erb tag
 
+## install base16shell https://github.com/chriskempson/base16-shell

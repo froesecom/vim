@@ -5,9 +5,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'rstacruz/sparkup'
-Plug 'Townk/vim-autoclose'
+"Plug 'Townk/vim-autoclose'
 Plug 'digitaltoad/vim-pug'
-Plug 'isRuslan/vim-es6'
+"Plug 'isRuslan/vim-es6'
 Plug 'leafgarland/typescript-vim'
 Plug 'tpope/vim-rails'
 Plug 'w0rp/ale'
@@ -17,12 +17,17 @@ Plug 'Quramy/vim-js-pretty-template'
 Plug 'ianks/vim-tsx'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 syntax on
 filetype plugin indent on
 set t_Co=256
-colorscheme Tomorrow-Night-Eighties
+
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 :set synmaxcol=300
 :set expandtab
