@@ -15,6 +15,7 @@ Plug 'Quramy/tsuquyomi'
 Plug 'pangloss/vim-javascript'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'ianks/vim-tsx'
+Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
