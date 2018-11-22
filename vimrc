@@ -18,6 +18,8 @@ Plug 'ianks/vim-tsx'
 Plug 'mxw/vim-jsx'
 Plug 'Valloric/YouCompleteMe'
 Plug 'chriskempson/base16-vim'
+" Find and replace globablly
+Plug 'brooth/far.vim'
 call plug#end()
 
 syntax on
@@ -29,6 +31,10 @@ if filereadable(expand("~/.vimrc_background"))
   source ~/.vimrc_background
 endif
 
+" cursor stuff
+:set cursorline
+highlight Cursor guifg=white guibg=black
+
 :set synmaxcol=300
 :set expandtab
 :set tabstop=2
@@ -37,7 +43,6 @@ endif
 :set laststatus=2
 :set incsearch
 :set scrolljump=20
-:set cursorline
 :set omnifunc=csscomplete#CompleteCSS
 :set clipboard=unnamedplus
 :set noeb vb t_vb= "no bloopy noises"
@@ -85,7 +90,7 @@ let g:ale_lint_on_save = 1
 let g:ale_fix_on_save = 1
 highlight ALEError ctermbg=168
 highlight ALEError ctermfg=Black
-highlight YcmErrorSection ctermbg=Red
+highlight YcmErrorSection ctermbg=168
 highlight YcmErrorSection ctermfg=Black
 autocmd FileType typescript JsPreTmpl html
 autocmd FileType typescript syn clear foldBraces
